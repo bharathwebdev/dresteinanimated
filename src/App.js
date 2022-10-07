@@ -1,25 +1,114 @@
-import logo from './logo.svg';
+import React, { useRef, useEffect, useState } from 'react';
+// import { gsap } from "gsap";
+
 import './App.css';
 
-function App() {
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+
+import Nav from '../src/component/Nav'
+import Main from '../src/component/Main'
+import { useCallback } from 'react';
+import { Particle } from './configsFiles/partical.config';
+import './styles/astroid.css'
+import styled from 'styled-components';
+import Departments from './component/Departments';
+
+import { motion, useScroll, useTransform } from "framer-motion";
+
+
+const DepartmentDiv = styled.div`
+position: sticky;
+`;
+
+
+const App = () => {
+  const parallex = useRef(null)
+  const scroll   = useRef(null)
+  const [background, setBackground] = useState('#262626');
+  const headerRef = useRef(null);
+  const { scrollY } = useScroll();
+  const yValue = useTransform(scrollY, [0, 1000], [0, -300]);
+  const { scrollYProgress } = useScroll();
+  
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+  const particlesLoaded = useCallback(async (container) => {}, []);
+
+
+
+
+const parallexFun = ()=>{
+
+window.requestAnimationFrame(()=>{
+  var pos = window.pageYOffset* parallex.current.dataset.rate
+  if(parallex.current.dataset.direction === 'vertical'){
+    parallex.current.style.transform = 'translate3d(0px ,'+ pos +'px'+',0px)'
+
+  }else {
+    var posX = window.pageYOffset * parallex.current.dataset.ratex;
+    var posY = window.pageYOffset * parallex.current.dataset.ratey;
+    parallex.current.style.transform = 'translate3d(' +posX+'px,'+posY+'px,0px)'
+  }
+})
+
+    
+  
+}
+  
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+<div ref={scroll}>
+
+  <motion.div className='scrollprogress' style={{ scaleX:scrollYProgress}} />
+
+
+<div className="meteors">
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+  <div className="meteor"></div>
+</div>
+<Particles
+        className="particles"
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={Particle}
+     
+        
+      />
+  <Nav/>
+  <Main/>
+  <motion.div
+        className="img"
+        style={{ y: yValue, zIndex: -1 }}
+      ></motion.div>
+
+  <DepartmentDiv>
+        <Departments />
+      </DepartmentDiv>
+<div style={{
+  height:'200vh'
+}}>
+
+</div>
+</div>
+
+  )
 }
 
 export default App;
+
+
