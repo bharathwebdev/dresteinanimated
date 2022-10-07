@@ -8,6 +8,10 @@
  * production code, beware of the browser
  * prefixes.
  */
+body{
+    margin: 0;
+    padding: 0;
+}
 
 
  #menuToggle

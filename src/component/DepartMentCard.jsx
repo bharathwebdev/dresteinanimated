@@ -114,9 +114,8 @@ const cardforMobile  = {
       x:0,
       opacity:1,
       transition:{
-        type:'spring',
-        bounce:0.2,
-        duration:2
+
+        duration:1
         
       }
     },
@@ -128,9 +127,9 @@ const cardforDesktop  = {
       y:0,
       opacity:1,
       transition:{
-        type:'spring',
-        bounce:0.4,
-        duration:2
+        // type:'spring',
+        // bounce:0.4,
+        duration:1
         
       }
     },
@@ -140,7 +139,7 @@ return (
     <motion.div 
     initial='offscreen'
     whileInView='onscreen'
-    viewport={{once:false,amount:0.5}}
+    viewport={{once:true,amount:0.5}}
       variants={device < 700 ? cardforMobile : cardforDesktop}
 
     

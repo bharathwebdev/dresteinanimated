@@ -2,10 +2,11 @@ import React, { useRef, useEffect, useState } from 'react';
 // import { gsap } from "gsap";
 
 import './App.css';
-
+// import '../src/styles/Gallery.scss'
+// import Gallery from './component/Gallery';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-
+import Gallery from './component/Gallery';
 import Nav from '../src/component/Nav'
 import Main from '../src/component/Main'
 import { useCallback } from 'react';
@@ -99,11 +100,9 @@ window.requestAnimationFrame(()=>{
   <DepartmentDiv>
         <Departments />
       </DepartmentDiv>
-<div style={{
-  height:'200vh'
-}}>
-
-</div>
+  <div>
+    {/* <Gallery/> */}
+  </div>
 </div>
 
   )
