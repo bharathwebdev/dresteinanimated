@@ -39,7 +39,7 @@ function DepartMentCard({ img, title, des, color }) {
     content: "saveetha";
     position: absolute;
     top: 55%;
-    left: 20%;
+    left: 10%;
     font-size: 3em;
     font-weight: 800;
     font-style: italic;
@@ -115,7 +115,7 @@ const cardforMobile  = {
       opacity:1,
       transition:{
         type:'spring',
-        bounce:0.4,
+        bounce:0.2,
         duration:2
         
       }

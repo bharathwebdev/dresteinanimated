@@ -25,6 +25,7 @@ body {
    will-change:transform;
   min-height: 100vh;
    transform: translateZ(0);
+
   
 } 
 @media screen  and(max-width:600px){

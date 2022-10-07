@@ -16,6 +16,7 @@ const MainHeader = styled.div`
   min-height: 100vh;
   position: relative;
   color: white;
+
   /* margin-top: 0rem; */
 
   
@@ -48,6 +49,7 @@ const HeaderMainText = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+
 
   @media screen and (max-width: 600px) {
     border: none;
@@ -144,11 +146,12 @@ const Timer = styled.div`
   }
 `;
 const HeaderBtn  = styled.div`
-display: flex;
+/* display: flex;
 justify-content:center;
-align-items: center;
-position: absolute;
-bottom: 10em;
+align-items: center; */
+background-color: red;
+display: flex;
+justify-content: center;
 
 width: 100%;
     @media screen and (min-width:600px) {
@@ -169,17 +172,19 @@ const RegisterNow = styled.button`
   padding: 1rem;
   transition: all 0.5s;
   font-family: "Poppins", sans-serif;
-  text-align: center;
+
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   cursor: pointer;
   transition: all 0.5s;
-  margin: 5px;
+  margin-top: 2em;
 
   @media screen and (max-width: 600px) {
     font-size: 7vw;
     width: 80%;
-    margin-top: 100px;
+
+
+
   }
 `
 
@@ -258,19 +263,13 @@ theme='dark'
 endAt={'2022-11-10 01:26:58'} // Date/Time
 />
         </div>
-         
-          {/* <Span bold>{date.days}</Span>
-          <Span timer>days</Span> <Span bold>{date.hr}</Span>
-          <Span timer>hrs</Span>
-          <br /> <Span bold>{date.min}</Span>
-          <Span timer>mins</Span>
-          <Span bold>{date.sec}</Span><Span timer>sec</Span> */}
+      
         </Timer>
       </HeaderBg>
-      <HeaderBtn as={motion.div}    
+      {/* <HeaderBtn as={motion.div}    
         initial={"offscreen"}
         animate={"onscreen"}
-           variants={rn}   className="header_btn" >
+           variants={rn}   className="header_btn" > */}
       
         <RegisterNow 
            className="button">
@@ -280,7 +279,7 @@ endAt={'2022-11-10 01:26:58'} // Date/Time
      
           </RegisterNow>
 
-      </HeaderBtn>
+      {/* </HeaderBtn> */}
     </MainHeader>
   );
 }
