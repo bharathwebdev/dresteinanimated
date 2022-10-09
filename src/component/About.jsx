@@ -5,7 +5,7 @@ import {motion,variants} from 'framer-motion'
 function About() {
     const AboutHead  = styled.div`
         height: auto;
-        width: 100%;
+        width: 100vw;
          background-color: #5608f3;
         margin-top: 100px;
         display: flex;

@@ -146,7 +146,8 @@ const GallerHeader = styled.div`
     whileInView='onscreen'
     variants={text} 
     >Last Year Drestein Memories</Head>
-     <div> <Swiper 
+     <div> 
+      <Swiper 
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{

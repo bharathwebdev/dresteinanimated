@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import logo from '../assets/dresteinLogo.svg'
 const FooterHeader = styled.div`
-width: 100%;
+width: 100vw;
 height: 100%;
 background-color: #8a57ef;
 margin-top: 5rem;
@@ -43,12 +43,15 @@ padding:4rem;
     }
     
 `
+
 const FooterTextTitle= styled.h1`
  padding: 1rem 0 ;
 `
+
 const FooterMainText = styled.p`
     
 `
+
 const FooterConatinAll= styled.div`
     display: flex;
     justify-content: center;
@@ -62,6 +65,7 @@ const FooterBottom = styled.div`
     @media screen  and (max-width:600px){
         flex-direction: column;
         width: 100%;
+        margin: 0;
     }
 `
 const Policy= styled.div`

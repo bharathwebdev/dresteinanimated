@@ -20,7 +20,7 @@ const GuestTitle = styled.div`
 
 `
 const GuestImageDiv = styled.div`
-   width: 100%;
+   width: 100vw;
    
 
    text-align: center;
@@ -28,8 +28,8 @@ const GuestImageDiv = styled.div`
 
 `
 const GuestImg = styled.img`
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
