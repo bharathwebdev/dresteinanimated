@@ -6,7 +6,7 @@ import './App.css';
 // import Gallery from './component/Gallery';
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Gallery from './component/Gallery';
+import ImageGallery from './component/Gallery';
 import Nav from '../src/component/Nav'
 import Main from '../src/component/Main'
 import { useCallback } from 'react';
@@ -29,9 +29,10 @@ const App = () => {
   const [background, setBackground] = useState('#262626');
   const headerRef = useRef(null);
   const { scrollY } = useScroll();
-  const yValue = useTransform(scrollY, [0, 1000], [0, -300]);
+  const MValue = useTransform(scrollY, [0, 1000], [0, -200]);
+  const DValue = useTransform(scrollY, [0, 1000], [0, -500]);
   const { scrollYProgress } = useScroll();
-  
+  const DeviceSize = window.innerWidth
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -94,14 +95,14 @@ window.requestAnimationFrame(()=>{
   <Main/>
   <motion.div
         className="img"
-        style={{ y: yValue, zIndex: -1 }}
+        style={{ y: DeviceSize < 800 ? MValue : DValue  , zIndex: -1 }}
       ></motion.div>
 
   <DepartmentDiv>
         <Departments />
       </DepartmentDiv>
   <div>
-    {/* <Gallery/> */}
+    <ImageGallery/>
   </div>
 </div>
 

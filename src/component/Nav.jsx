@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import saveethalogo from '../assets/saveethaLogo.svg'
 import dresteinLogo from '../assets/dresteinLogo.svg'
+import Mobilenav from './Mobilenav'
 import '../styles/HambBurger.css'
 const Navbar = styled.nav`
     display: flex;
@@ -45,11 +46,12 @@ const rotate = keyframes`
   `
 
 const DLogo = styled.img`
- width: 15%;
+  width: 20%;
+  margin-right: 10px;
  animation: ${rotate} 4s infinite linear;
  transform-origin:center;
 @media screen and (max-width: 600px){
-
+  width: 16%;
 }
 
 
@@ -58,12 +60,18 @@ const DLogo = styled.img`
 ` 
 const LogoHead = styled.div`
       display: flex;
+      flex-direction: row;
       align-items: center;
-      width: 50%;
+    
+     
       /* background-color: green; */
       justify-content: center;
+
+
+
       @media screen and (max-width: 600px){
       width: 100%;
+
 
 
 }
@@ -76,7 +84,7 @@ const EventLogo = styled.div`
 
   justify-content: center;
   align-items: center;
-  width: 50%;
+  min-width: 100px;
   /* background-color: blue; */
 
   @media screen and (max-width: 600px) {
@@ -121,16 +129,24 @@ const NavHead = styled.ul`
   justify-content: space-around;
   align-items: center;
   width: 50%;
+
+
   @media screen and (max-width: 600px) {
   display: none;
   
 }
 `
 const NavItem = styled.li`
-
+cursor: pointer;
 text-decoration: none;
 
-  
+`
+const MobileNavHeader = styled.div`
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+
 `
 
 function Nav() {
@@ -150,32 +166,14 @@ function Nav() {
           <NavItem>Gallery</NavItem>
           <NavItem>About</NavItem>
         </NavHead>
-        {/* <nav role="navigation">
-  <div id="menuToggle">
+        <MobileNavHeader>
 
-    <input type="checkbox" />
-    
-
-
-    <span></span>
-    <span></span>
-    <span></span>
-    
- 
-    <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
-    </ul>
-  </div>
-</nav> */}
+        <Mobilenav/>
         <LogoHead>
-      
+        
         <DLogo src={dresteinLogo} alt="DresteinLogo" />
-
-
+       
+        
         < EventLogo>
           <DresteinLetter color='red'>DRESTEIN</DresteinLetter>
           <Year>2 0 2 2</Year>
@@ -183,7 +181,10 @@ function Nav() {
 
 
       </LogoHead>
+      </MobileNavHeader>
      </Navbar>
+    
+     
      {/* <div>
 
     <Main/>

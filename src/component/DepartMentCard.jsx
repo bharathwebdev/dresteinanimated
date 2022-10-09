@@ -106,7 +106,7 @@ const cardimg  = {
     },
 }
 const device = window.innerWidth;
-console.log(device)
+
 
 const cardforMobile  = {
   offscreen:{ x:-100,opacity:0},

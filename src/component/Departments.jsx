@@ -46,9 +46,9 @@ function Departments() {
   return (
     <>
       <motion.h1   
-          initial={{y:100,opacity:0,scale:0.1}}
+          initial={{y:100,opacity:0}}
           
-          whileInView={{y:0,opacity:1,scale:1}}
+          whileInView={{y:0,opacity:1}}
           transition={{duration:1}}
           
           viewport={{once:false,amount:1}}
