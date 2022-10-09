@@ -222,7 +222,7 @@ const text  = {
 
   return (
     <MainHeader 
-  
+     id="Main"
      className="main_header"
      >
       <HeaderBg   as={motion.div} 
@@ -232,8 +232,9 @@ const text  = {
     
     transition={{
       staggerChildren:0.5
-    }} className="header_bg  ">
-        <HeaderMainText className="header_main_text ">
+    }} 
+    className="header_bg  ">
+        <HeaderMainText as={motion.div} variants={text}  className="header_main_text ">
 
 
       

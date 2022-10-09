@@ -14,8 +14,10 @@ import { Particle } from './configsFiles/partical.config';
 import './styles/astroid.css'
 import styled from 'styled-components';
 import Departments from './component/Departments';
-
+import About from './component/About';
 import { motion, useScroll, useTransform } from "framer-motion";
+import Guest from './component/Guest';
+import Footer from './component/Footer';
 
 
 const DepartmentDiv = styled.div`
@@ -98,13 +100,24 @@ window.requestAnimationFrame(()=>{
         style={{ y: DeviceSize < 800 ? MValue : DValue  , zIndex: -1 }}
       ></motion.div>
 
-  <DepartmentDiv>
+  <DepartmentDiv id='Departments'>
         <Departments />
       </DepartmentDiv>
   <div>
     <ImageGallery/>
   </div>
+
+  <div>
+<About/>
+  </div>
+  <div>
+ <Guest/>
+  </div>
+  <div>
+    <Footer/>
+  </div>
 </div>
+
 
   )
 }

@@ -1,8 +1,13 @@
-.NavAll{
+.onlyshow{
   display: none;
 }
 @media screen and (max-width:600px) {
-  .NavAll{
-    display: block;
+  .onlyshow{
+    display: inline;
+    position: sticky;
+    top: 0;
+    
+  
+    
   }
 }

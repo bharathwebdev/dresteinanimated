@@ -9,7 +9,7 @@ const Navbar = styled.nav`
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0 0 1rem;
-
+    
 
     width: 100%;
 
@@ -143,8 +143,11 @@ text-decoration: none;
 `
 const MobileNavHeader = styled.div`
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+  
+
+
 
 
 `
@@ -167,8 +170,10 @@ function Nav() {
           <NavItem>About</NavItem>
         </NavHead>
         <MobileNavHeader>
+     
 
         <Mobilenav/>
+
         <LogoHead>
         
         <DLogo src={dresteinLogo} alt="DresteinLogo" />
@@ -181,14 +186,13 @@ function Nav() {
 
 
       </LogoHead>
+
       </MobileNavHeader>
+      
      </Navbar>
     
      
-     {/* <div>
-
-    <Main/>
-     </div> */}
+    
     </nav>
   )
 }

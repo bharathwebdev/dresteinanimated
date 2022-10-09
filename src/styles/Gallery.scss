@@ -1,16 +1,67 @@
-.Gallery_body{
-	padding: 40px;
-	background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
-	color: #0e3481;
-	min-height: 100vh;
-	margin-top: 2em;
+// #app { height: 100% }
+// html,
+// body {
+//   position: relative;
+//   height: 100%;
+// }
+
+// body {
+
+// }
+
+// .swiper {
+//   width: 100%;
+//   padding-top: 50px;
+//   padding-bottom: 50px;
+// }
+
+// .swiper-slide {
+//   background-position: center;
+//   background-size: cover;
+//   width: 300px;
+//   height: 300px;
+// }
+
+// .swiper-slide img {
+//   display: block;
+//   width: 100%;
+// }
+
+
+
+
+
+
+
+
+.swiper {
+  min-width: 100%;
+  height: auto;
 }
-.header .lead {
-	max-width: 620px;
-  }
-  
-  /** Below CSS is completely optional **/
-  .gallery-item {
-	width: 200px;
-	padding: 5px;
-  }
+
+.swiper-slide {
+  text-align: center;
+
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
